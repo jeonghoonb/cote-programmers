@@ -53,13 +53,13 @@ public class No_77484 {
     }
 
     public int ranking(int correct) {
-        switch (correct) {
-            case 6: return 1;
-            case 5: return 2;
-            case 4: return 3;
-            case 3: return 4;
-            case 2: return 5;
-            default: return 6;
-        }
+        return switch (correct) {
+            case 6 -> 1;
+            case 5 -> 2;
+            case 4 -> 3;
+            case 3 -> 4;
+            case 2 -> 5;
+            default -> 6;
+        };
     }
 }
