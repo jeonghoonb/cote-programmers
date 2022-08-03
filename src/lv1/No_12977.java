@@ -9,24 +9,41 @@ package lv1;
         - 1
  */
 public class No_12977 {
+
+    int[] nums = {1, 2, 3, 4};
+    int answer = 0;
+
     public void solution() {
-        // input
-        int[] nums = {1, 2, 3, 4};
-//        int[] nums = {1, 2, 7, 6, 4};
-        int answer = -1;
 
-        // local 변수
-        int totalSum = 0;
+        // 숫자 3개 더한 값들 (중복 제거란 조건이 있었으면 Set 사용)
+        int answer = 0;
 
-        // 전부 더하기
-        for (int num : nums) {
-            totalSum += num;
+        // 그 중에 소수 구하기
+        for (int i = 0; i < nums.length - 2; i++) {
+            for (int j = i + 1; j < nums.length - 1; j++) {
+                for (int k = j + 1; k < nums.length; k++) {
+                    int sum = nums[i] + nums[j] + nums[k];
+                    if (isPrime(sum)) {
+                        answer++;
+                    }
+                }
+            }
         }
 
-        // 항목
-
-        // ansert
+        // answer
         System.out.println(answer);
+    }
+
+    private boolean isPrime(int num) {
+        System.out.println("num: " + num + ", sqrt: " + Math.sqrt(num));
+        if (1 == num) return false;
+        if (2 == num) return true;
+
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) return false;
+        }
+
+        return true;
     }
 
 }
