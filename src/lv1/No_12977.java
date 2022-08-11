@@ -15,10 +15,7 @@ public class No_12977 {
 
     public void solution() {
 
-        // 숫자 3개 더한 값들 (중복 제거란 조건이 있었으면 Set 사용)
-        int answer = 0;
-
-        // 그 중에 소수 구하기
+        // 주어진 nums에서 3개의 수 더하고 소수 개수 체크하기
         for (int i = 0; i < nums.length - 2; i++) {
             for (int j = i + 1; j < nums.length - 1; j++) {
                 for (int k = j + 1; k < nums.length; k++) {
@@ -30,7 +27,6 @@ public class No_12977 {
             }
         }
 
-        // answer
         System.out.println(answer);
     }
 
