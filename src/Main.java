@@ -1,5 +1,4 @@
-import hash.No_42576;
-import lv1.No_92334;
+import stackAndQueue.No_12906;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,8 +6,9 @@ public class Main {
 //        No_12977 target = new No_12977();
 //        No_1845 target = new No_1845();
 //        No_92334 target = new No_92334();
+//        No_42576 target = new No_42576();
 
-        No_42576 target = new No_42576();
+        No_12906 target = new No_12906();
 
         target.solution();
     }
