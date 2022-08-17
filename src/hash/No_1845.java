@@ -1,8 +1,6 @@
 package hash;
 
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.stream.Collectors;
 
 /*
     포켓몬 (https://school.programmers.co.kr/learn/courses/30/lessons/1845)
@@ -28,8 +26,7 @@ public class No_1845 {
         // 이후 Set size와 nums/2의 사이즈 중 작거나 같은 값 고르기
         answer = Integer.min(nums.length / 2, pocketmonSet.size());
 
-        /*
-        Programmers 에서 compile error 발생
+        /* Stream 이용 하기
         answer = Arrays.stream(nums)
                 .boxed()
                 .collect(Collectors.collectingAndThen(Collectors.toSet(),
