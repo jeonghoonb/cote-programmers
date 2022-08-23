@@ -19,6 +19,11 @@ public class No_12909 {
     boolean answer = false;
 
     public void solution() {
+        useArray();
+        useStack();
+    }
+
+    private void useStack() {
         Stack<Character> stack = new Stack<>();
 
         for (char c : s.toCharArray()) {
@@ -26,21 +31,38 @@ public class No_12909 {
                 if (right == c) {
                     answer = false;
                     break;
-                } else {
-                    stack.add(c);
                 }
+                stack.add(c);
             } else {
                 if (stack.peek() == c) {
                     stack.add(c);
-                } else {
-                    stack.pop();
                 }
+                stack.pop();
             }
         }
 
         answer = stack.isEmpty();
 
         System.out.println(answer);
+    }
+
+    private void useArray() {
+        int count = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if ('(' == s.charAt(i)) {
+                count++;
+            }
+
+            if (')' == s.charAt(i)) {
+                count--;
+            }
+
+            if (count < 0) {
+                break;
+            }
+        }
+
+        System.out.println(count == 0);
     }
 
 
