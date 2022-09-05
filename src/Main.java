@@ -1,3 +1,4 @@
+import kakao.No_72410;
 import sort.No_42746;
 
 public class Main {
@@ -12,9 +13,9 @@ public class Main {
 //        No_42586 target = new No_42586();
 //        No_42577 target = new No_42577();
 //        No_42748 target = new No_42748();
+//        No_42746 target = new No_42746();
 
-        No_42746 target = new No_42746();
-
+        No_72410 target = new No_72410();
         target.solution();
     }
 }
