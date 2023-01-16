@@ -15,7 +15,7 @@ package hash;
         - return : true (접두어 없음)
  */
 
-import java.util.*;
+import java.util.Arrays;
 
 public class No_42577 {
 

@@ -1,5 +1,4 @@
 import kakao.No_72410;
-import sort.No_42746;
 
 public class Main {
     public static void main(String[] args) {
