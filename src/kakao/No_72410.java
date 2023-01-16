@@ -71,6 +71,7 @@ public class No_72410 {
         if (answer.isBlank()) {
             answer = "a";
         }
+
         return answer;
     }
 
@@ -78,12 +79,14 @@ public class No_72410 {
         if (15 < answer.length()) {
             answer = answer.substring(0, 15);
         }
+
         return answer;
     }
     private String filterByLengthUnder2(String answer) {
         while (3 > answer.length()) {
             answer += answer.charAt(answer.length() - 1);
         }
+
         return answer;
     }
 
